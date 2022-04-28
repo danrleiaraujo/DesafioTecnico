@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Página de login para membros do EcompJr.">
         <title>EcompJr - Login</title>
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="Icone.ico" type="image/x-icon">
 
     </head>
 
@@ -26,7 +26,7 @@
                     <img class="logoEcompJr" src="images\logomarca.png" alt="Logo EcompJr" height="100">
                 </div>
                 <form class="login" action="">
-                    <a class="link" href="">Criar conta</a>
+                    <a class="link" href="">crie sua conta</a>
                     <div class="input-field">
                         <input type="text" name="usuario" id="usuario" placeholder="Coloque Seu Usuário">
                         <div class="underline"></div>
@@ -43,7 +43,7 @@
         </main>
 
         <footer class="rodape">
-            <img src="images/EcompJr.svg" alt="EcompJr" height="40">
+            <img class="rodapeImagem" src="images/EcompJr.svg" alt="EcompJr" height="40">
         </footer>
 
     </body>
@@ -59,13 +59,18 @@
             text-decoration: none;
             font-family: sans-serif;
         }
-
         body{
             background: linear-gradient(68.15deg, #24232F 16.62%, #516A9B 85.61%);
             font-size: 100%;
         }
 
         .cabecalho {
+            display:flex;
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+            background: linear-gradient(to right,#516A9B, #24232F);
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -84,15 +89,14 @@
         }
         .iconeEcompJr{
             padding-left: 30px;
-            height: 62px;
+            height: 42px;
         }   
-
 
         .conteudo{
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
-            min-width: 100vw;
+            min-height: 97vh;
+            min-width: auto;
             align-items: center;
             align-self: auto;
             justify-content: center;
@@ -116,38 +120,67 @@
         .login{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            align-self: auto;
-            justify-content: center;
+            align-items: stretch;
         }
         .tituloConteudo{
             color: rgba(81, 106, 155, 1);
             font-family: 'Righteous', cursive;
+            font-weight: 400;
+            font-size: 40px;
         }
         .link{
             font-family: 'Sarala', sans-serif, px;
             color: rgba(81, 106, 155, 1);
+            display: flex;
+            justify-content:center;
+            font-size: 13px;
         }
         
         .input-field{
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            padding: 3px;
         }
         .input-field input{
+            display: flex;
             outline: none;
             font-size: 0,9rem;
-            color:#516A9B;
+            color: #FFFFFF;
+            border-radius: 3px;
+            padding: 0.5rem;
+            background: #516A9B;
+            margin-bottom: 0.3rem;
         }
         .input-field input::placeholder{
-            color: rgba(0, 0, 0, 0,5);
+            color: #FFFFFF;
+        }
+        form input[type="submit"]{
+            padding: 0.5rem;
+            background: linear-gradient(to left, rgba(81, 106, 155, 1),rgba(81, 106, 155, 0));
+            cursor: pointer;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            font-weight: 300;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        form input[type="submit"]:hover{
+            letter-spacing: 0.5px;
+            background: linear-gradient(to right,rgba(81, 106, 155, 1),rgba(81, 106, 155, 0));
         }
 
         .rodape{
+            position: relative;
+            background: linear-gradient(to right,#516A9B, #24232F);
             border-top: 0.4px solid #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 10px;
         }
+        
     </style>
 
 </html>
