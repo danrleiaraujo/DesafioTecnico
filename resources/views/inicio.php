@@ -21,28 +21,28 @@
         </header>
 
         <main class="conteudo">
-        <section class="introducao">
-            <div class="tituloIntroducao">
-                <h1 class="tituloIntroducao1">Seja bem vindx ao Ecomp</h1>
-                <h1 class="tituloIntroducao2">Jr</h1>
-            </div>
-            <h2 class="subtituloIntroducao">Quem Somos?</h2>
-            <h4 class="textoIntroducao">Empresa Júnior de Engenharia de Computação, composta por alunos do curso da Universidade Estadual de Feira de Santana, que promove impactos positivos em micro e pequenas empresas por meio de soluções tecnológicas. Fundada em 2007, a EcompJr atualmente participa ativamente do propósito que envolve ser Movimento Empresa Júnior. A empresa promove uma vivência empresarial estratégica para estudantes interessados em liderar a mudança no atual cenário brasileiro.</h4>
-        </section>
-        <section class="filosofia">
-            <div class="missao">
-                <h2 class="filosofiaTitulo">Missão</h2>
-                <h4 class="filosofiaTexto">Através da vivência empresarial e trabalho em equipe, formar profissionais inovadores, comprometidos e capazes de vencer desafios futuros</h4>
-            </div>
-            <div class="valores">
-                <h2 class="filosofiaTitulo">Valores</h2>
-                <h4 class="filosofiaTexto">Ser uma empresa que realiza projetos de impacto, mais conectada ao movimento empresa júnior e com grande reconhecimento dentro e fora da universidade.</h4>
-            </div>
-            <div class="visao">
-                <h2 class="filosofiaTitulo">Visão</h2>
-                <h4 class="filosofiaTexto">Os valores de uma empresa guiam a conduta da mesma, portanto a EcompJr. baseia-se nos seguintes valores: Protagonismo, Cooperatividade, Assiduidade, Resiliência, Constância em resultados, Evolução com os erros, Conexão com o Movimento, Foco na Qualidade, Ética e Empatia.</h4>
-            </div>
-        </section>
+            <section class="introducao">
+                <div class="tituloIntroducao">
+                    <h1 class="tituloIntroducao1">Seja bem vindx ao Ecomp</h1>
+                    <h1 class="tituloIntroducao2">Jr</h1>
+                </div>
+                <h2 class="subtituloIntroducao">Quem Somos?</h2>
+                <h4 class="textoIntroducao">Empresa Júnior de Engenharia de Computação, composta por alunos do curso da Universidade Estadual de Feira de Santana, que promove impactos positivos em micro e pequenas empresas por meio de soluções tecnológicas. Fundada em 2007, a EcompJr atualmente participa ativamente do propósito que envolve ser Movimento Empresa Júnior. A empresa promove uma vivência empresarial estratégica para estudantes interessados em liderar a mudança no atual cenário brasileiro.</h4>
+            </section>
+            <section class="filosofia">
+                <div class="itemFilosofia">
+                    <h2 class="filosofiaTitulo">Missão</h2>
+                    <h4 class="filosofiaTexto">Através da vivência empresarial e trabalho em equipe, formar profissionais <b>inovadores, comprometidos</b> e <b>capazes de vencer desafios</b> futuros</h4>
+                </div>
+                <div class="itemFilosofia">
+                    <h2 class="filosofiaTitulo">Valores</h2>
+                    <h4 class="filosofiaTexto">Ser uma empresa que realiza <b>projetos de impacto</b>, mais <b>conectada ao movimento empresa júnior</b> e com grande reconhecimento <b>dentro e fora</b> da universidade.</h4>
+                </div>
+                <div class="itemFilosofia">
+                    <h2 class="filosofiaTitulo">Visão</h2>
+                    <h4 class="filosofiaTexto">Os valores de uma empresa guiam a conduta da mesma, portanto a EcompJr. baseia-se nos seguintes valores: <b>Protagonismo, Cooperatividade, Assiduidade, Resiliência, Constância em resultados, Evolução com os erros, Conexão com o Movimento, Foco na Qualidade, Ética e Empatia</b>.</h4>
+                </div>
+            </section>
         </main>
 
         <footer class="rodape">
@@ -96,13 +96,8 @@
     }   
 
     .conteudo{
-        margin-top: 60px;
-        display: flex;
-        flex-direction: column;
-        min-height: 97vh;
-        min-width: auto;
-        align-items: center;
-        justify-content: center;
+        margin-top: 100;
+        min-height: 78vh;
     }
     .introducao{
         display: flex;
@@ -112,7 +107,10 @@
 
     .tituloIntroducao{
         display: flex;
-        padding-bottom: 20px;
+        align-items: baseline;
+        justify-content: center;
+        padding-bottom: 10px;
+        min-width: 40rem;
     }
     .tituloIntroducao1{
         color: #FFFFFF;
@@ -134,8 +132,8 @@
         padding-bottom: 10px;
     }
     .textoIntroducao{
-        padding-left: 10rem;
-        padding-right: 10rem;
+        padding-left: 80px;
+        padding-right: 80px;
         text-align: justify;
         font-family: 'Sarala', sans-serif;
         color: #FFFFFF;
@@ -143,17 +141,19 @@
     }
     .filosofia{
         display: flex;
-        flex-direction: row;
-        align-content: space-between;
-        margin: 10px;
+        margin-top: 30px;
+        padding-left: 7rem;
+        padding-right: 7rem;
+        justify-content: space-around;
     }
-    .missao{
+    .itemFilosofia{
+        border: 3px solid #FFFFFF;
         display: flex;
         text-align: justify;
-        justify-content: space-around;
+        gap: 10px;
         background: rgba(194, 220, 238, 1);
-        max-width: 350px;
-        min-width: 10vw;
+        max-width: 300px;
+        min-width: 23vw;
         min-height: 10vh;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0,2) ;
         border-radius: 8px;
@@ -161,33 +161,17 @@
         flex-direction: column;
         align-items: center;
     }
-    .valores{
-        display: flex;
-        text-align: justify;
-        justify-content: space-around;
-        background: rgba(194, 220, 238, 1);
-        max-width: 350px;
-        min-width: 10vw;
-        min-height: 10vh;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0,2) ;
-        border-radius: 8px;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: center;
+    .filosofiaTitulo{
+        color: rgba(29, 111, 183, 1);
+        font-family: 'Righteous', cursive;
+        font-weight: 400;
+        font-size: 35px;
     }
-    .visao{
-        display: flex;
-        text-align: justify;
-        justify-content: space-around;
-        background: rgba(194, 220, 238, 1);
-        max-width: 350px;
-        min-width: 10vw;
-        min-height: 10vh;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0,2) ;
-        border-radius: 8px;
-        padding: 1rem;
-        flex-direction: column;
-        align-items: center;
+    .filosofiaTexto{
+        color: rgba(81, 106, 155, 1);
+        font-family: 'Sarala', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
     }
 
     .rodape{
