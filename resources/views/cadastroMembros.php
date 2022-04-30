@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Página para cadastro de membros do EcompJr.">
         <title>EcompJr - Cadastrar Membro</title>
-        <link rel="shortcut icon" type="image/x-icon" href="images/Icone.ico">
+        <link rel="shortcut icon" href="Icone.ico" type="image/x-icon">
         
     </head>
 

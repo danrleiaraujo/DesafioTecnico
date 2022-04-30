@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página de login para membros do EcompJr.">
+        <meta name="description" content="Página para listagem de membros da empresa Jr.">
         <title>EcompJr - Membros</title>
         <link rel="shortcut icon" href="Icone.ico" type="image/x-icon">
 
@@ -14,10 +14,13 @@
         <header class="cabecalho">
             <img class="iconeEcompJr" src="images/logo.svg" alt="icone da EcompJr">
             <nav class="linkCabecalho">
-                <a class="linkCabecalhoItem" href="">Login</a>
-                <a class="linkCabecalhoItem" href="">Cadastro</a>
+                <a class="linkCabecalhoItem" href="">Início</a>
+                <a class="linkCabecalhoItem" href="">Cadastrar Membros</a>
+                <a class="linkCabecalhoItem" href="">Membros</a>
+                <a class="linkCabecalhoItem" href="">Sair</a>
             </nav>
         </header>
+
 
         <main class="conteudo">
             <h1 class="titulo">Membros</h1>
@@ -29,31 +32,32 @@
                             <input type="text" name="membro" id="membro" placeholder="Coloque O Nome do Membro">
                             <div class="underline"></div>
                         </div>
-                    <input class="botaoPesquisar" type="submit" value="Iniciar Pesquisa">
+                        <input class="botaoPesquisar" type="submit" value="Iniciar Pesquisa">
 
                     </form>
                 </div>
                 <div class="resultado">
-                    <table border="1">
+                    <table class="tabela">
                         <thead class="topo">
-                            <tr>
-                                <td class="nome">Nome</td>
-                                <td class="cargo">Cargo</td>
+                            <tr class="coluna">
+                                <th class="linha1">Nome</td>
+                                <th class="linha1">Cargo</td>
                             </tr>
                         </thead>
                         
-                        <tbody>
-                            <tr>
-                                <enf-chefe-medicamentos-cell
-                                    :nome="medicamentos.nome"
-                                    :lote="medicamentos.lote"
-                                    :quantidade="medicamentos.quantidade"
-                                />
+                        <tbody class="corpo">
+                            <tr class="coluna">
+                                <td class="linha">almeida</td>
+                                <td class="linha">chfe</td>
+                            </tr>
+                            <tr class="coluna">
+                                <td class="linha">joao</td>
+                                <td class="linha">subchefe</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
             </div>
-          </div>
         </main>
 
         <footer class="rodape">
@@ -129,8 +133,12 @@
             border-radius: 8px;
             padding: 1rem;
         }
-        
-        
+        .busca{
+            color: rgba(81, 106, 155, 1);
+            font-family: 'Righteous', cursive;
+            font-weight: 400;
+            font-size: 20px;
+        }
         .input-field{
             display: flex;
             flex-direction: column;
@@ -160,37 +168,39 @@
             border-radius: 4px;
             transition: all 0.3s ease;
         }
-        
         form input[type="submit"]:hover{
             letter-spacing: 0.5px;
             background: linear-gradient(to right,rgba(81, 106, 155, 1),rgba(81, 106, 155, 0));
         }
-        
-        .busca{
-            color: rgba(81, 106, 155, 1);
-            font-family: 'Righteous', cursive;
-            font-weight: 400;
-            font-size: 20px;
-
-        }
-        .topo{
+        .resultado{
             display: flex;
-            justify-content:space-between
+            margin: auto;
         }
-        .nome{
-            color: rgba(81, 106, 155, 1);
-            font-family: 'Righteous', cursive;
-            font-weight: 400;
-            font-size: 30px;
-            padding-right: 40px;
+        .tabela{
+            width: 100%;
+            text-align: center;
         }
-        .cargo{
-            color: rgba(81, 106, 155, 1);
-            font-family: 'Righteous', cursive;
-            font-weight: 400;
-            font-size: 30px;
-        }
+        .tabela thead tr th:nth-child(1){width: 60%;}
+        .tabela thead tr th:nth-child(2){width: 40%;}
+        .tabela tbody tr td:nth-child(1){width: 60%;}
+        .tabela tbody tr td:nth-child(2){width: 40%;}
 
+        .corpo{
+            background-color: #516A9B;
+        }
+        .linha1{
+            color: rgba(81, 106, 155, 1);
+            font-family: 'Righteous', cursive;
+            font-weight: 400;
+            font-size: 30px;
+        }
+        .linha{
+            text-align: center;
+            color: #FFFFFF;
+            font-family:'Sarala', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+        }
         .rodape{
             position: relative;
             background: linear-gradient(to right,#516A9B, #24232F);
