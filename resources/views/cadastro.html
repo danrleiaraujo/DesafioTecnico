@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Página para cadastro de membros do EcompJr.">
-        <title>EcompJr - Cadastrar Membro</title>
-        <link rel="shortcut icon" href="Icone.ico" type="image/x-icon">
+        <meta name="description" content="Página de cadastro para ser membro do EcompJr.">
+        <title>EcompJr - Cadastro</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/Icone.ico">
         
     </head>
 
@@ -13,25 +13,28 @@
         <header class="cabecalho">
             <img class="iconeEcompJr" src="images/logo.svg" alt="icone da EcompJr">
             <nav class="linkCabecalho">
-                <a class="linkCabecalhoItem" href="">Início</a>
-                <a class="linkCabecalhoItem" href="">Cadastrar Membros</a>
-                <a class="linkCabecalhoItem" href="">Membros</a>
-                <a class="linkCabecalhoItem" href="">Sair</a>
+                <a class="linkCabecalhoItem" href="http://127.0.0.1:8000/">Login</a>
+                <a class="linkCabecalhoItem" href="http://127.0.0.1:8000/cadastro">Cadastro</a>
             </nav>
         </header>
 
         <main class="conteudo">
-            <h1 class="tituloConteudo">Cadastro de novos Membros</h1>
+            <h1 class="tituloConteudo">Cadastro</h1>
             <section class="conteudo-principal">
                 <form class="cadastrar" action="">
-                    <h5 class="itensForm">Nome do membro:</h5>
+                    <h5 class="itensForm">Nome:</h5>
                     <div class="input-field">
-                        <input type="text" name="nome" id="nome" placeholder="Coloque o Nome">
+                        <input type="text" name="nome" id="nome" placeholder="Coloque Seu Nome">
                         <div class="underline"></div>
                     </div>
-                    <h5 class="itensForm">Cargo:</h5>
+                    <h5 class="itensForm">Usuário:</h5>
                     <div class="input-field">
-                        <input type="text" name="Cargo" id="Cargo" placeholder="Coloque o Cargo">
+                        <input type="text" name="usuario" id="usuario" placeholder="Coloque Seu Usuário">
+                        <div class="underline"></div>
+                    </div>
+                    <h5 class="itensForm">Senha:</h5>
+                    <div class="input-field">
+                        <input type="text" name="senha" id="senha" placeholder="Coloque Sua Senha">
                         <div class="underline"></div>
                     </div>
                     <input class="botaoCadastrar" type="submit" value="Cadastrar">
@@ -104,13 +107,12 @@
             font-family: 'Righteous', cursive;
             font-weight: 400;
             font-size: 40px;
-            padding-bottom: 20px;
         }
         .conteudo-principal{
             background: rgba(194, 220, 238, 1);
             max-width: 350px;
             min-width: 25vw;
-            min-height: 20vh;
+            min-height: 40vh;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0,2) ;
             border-radius: 8px;
             padding: 1rem;
@@ -123,7 +125,7 @@
         }
         
         .itensForm{
-            font-family: 'Sarala', sans-serif;
+            font-family: 'Sarala', sans-serif, px;
             color: rgba(81, 106, 155, 1);
             display: flex;
             font-size: 13px;
